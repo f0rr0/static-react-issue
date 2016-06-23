@@ -25,13 +25,6 @@ module.exports = env => {
     module: {
       loaders: [
         {
-          test: /\.css$/,
-          loaders: [
-            'style',
-            'css'
-          ]
-        },
-        {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           loaders: [
