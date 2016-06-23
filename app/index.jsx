@@ -49,7 +49,7 @@ export default (locals, callback) => {
   const history = createMemoryHistory();
   const location = history.createLocation(locals.path);
   match({ routes, location }, (error, redirectLocation, renderProps) => {
-      callback(null, renderToString(<RoutingContext {...renderProps} />)});
+      callback(null, renderToString(<RoutingContext {...renderProps} />));
     }
   );
 };
