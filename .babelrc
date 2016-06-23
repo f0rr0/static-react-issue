@@ -1,0 +1,4 @@
+{
+  "presets": ["babel-preset-es2015-webpack", "react"],
+  "plugins": ["transform-class-properties", "transform-runtime"]
+}
