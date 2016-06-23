@@ -6,7 +6,7 @@ import { Router, Route, browserHistory,
 
 const createElement = (Component, props) => <Component key={new Date().getTime()} {...props} />;
 
-const App = ({ children }) => <div className="app">{children}</div>;
+const App = ({ children }) => <html id="root">{children}</html>;
 const About = () => <div>About</div>;
 const Home = () => {
   return (
@@ -48,7 +48,7 @@ export default (locals, callback) => {
   const history = createMemoryHistory();
   const location = history.createLocation(locals.path);
   match({ routes, location }, (error, redirectLocation, renderProps) => {
-      callback(null, `<html id="root">${renderToString(<RoutingContext {...renderProps} />)}</html>`);
+      callback(null, renderToString(<RoutingContext {...renderProps} />));
     }
   );
 };
